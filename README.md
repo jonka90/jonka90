@@ -156,8 +156,8 @@ Architektur ist **modular und provider-agnostisch** — Modelle (Claude, GPT, Ge
 |---------|-------------|------|
 | **Legal RAG Toolkit** | Ermöglicht Kanzleien, eigene Dokumentenbestände per Chat zu befragen — wiederverwendbar für verschiedene Mandate | Python · Flask · ChromaDB |
 | **Examens-Lernplanner** | Strukturiert die Examensvorbereitung mit Spaced Repetition — optimiert Lernzeit für Jura-Studierende | TypeScript · Next.js |
-| **DMS Connector** | Anbindung an ein proprietäres DMS ohne offizielle API — per Reverse Engineering über RabbitMQ realisiert | C# |
-| **Vermessungsprotokoll-Extraktion** | Automatischer Abgleich von Baudokumenten gegen Leistungsverzeichnisse — ersetzt manuelle Prüfung | Python |
+| **DMS-Integration** | Anbindung an ein proprietäres Dokumentenmanagementsystem über Message Queue (RabbitMQ) | C# |
+| **Baudokumenten-Analyse** | Automatisierter Abgleich von Projektdokumenten gegen Leistungsverzeichnisse — ersetzt manuelle Prüfung | Python |
 | **E-Mail-Export-Pipeline** | Konfigurierbarer Bulk-Export von Outlook-Postfächern für Compliance und Archivierung | Python |
 
 ---
