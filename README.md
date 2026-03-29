@@ -24,7 +24,7 @@ Aktuell: Manager KI & Automatisierung bei einer Kanzlei in Berlin.
 | **Semantische Suche** | ChromaDB + BGE-M3 (Dense Embeddings) | Bedeutungsbasierte Suche über Sprachgrenzen hinweg |
 | **NER-Extraktion** | LLM-gestützte Entitätenerkennung | Personen, Firmen, Beträge, Daten strukturiert erfassen |
 | **RAG-Chat** | LLM + Agent-basiertes Retrieval | Natürlichsprachliche Fragen mit Quellennachweis |
-| **Knowledge Graph** *(Phase 4)* | Neo4j / NetworkX | Beziehungsnetzwerke, Geldflüsse, Pfadanalysen |
+| **Knowledge Graph** | Neo4j / NetworkX | Beziehungsnetzwerke, Geldflüsse, Pfadanalysen |
 
 **Architektur:**
 ```
@@ -55,7 +55,7 @@ Retrieval-Strategie
 
 **Tech:** Python · Flask · SQLite FTS5 · ChromaDB · BGE-M3 · Neo4j · Azure OpenAI API · Mistral API · Ollama · PyMuPDF · Tesseract OCR
 
-**Ergebnis:** Funktionierender Prototyp als Alternative zu klassischen eDiscovery-Systemen. Hybrid-Retrieval (Dense + Sparse) für optimale Trefferqualität bei juristischen Fachbegriffen. DSGVO-konform durch drei Betriebsmodi: lokale Verarbeitung (Ollama), EU-Hosting (Mistral) oder Azure OpenAI mit europäischem Rechenzentrum — letzteres ist der Best-Practice-Ansatz, den auch Großkanzleien für den datenschutzkonformen KI-Einsatz nutzen.
+**Ergebnis:** Funktionierender Prototyp als Alternative zu klassischen eDiscovery-Systemen. Hybrid-Retrieval (Dense + Sparse) für optimale Trefferqualität bei juristischen Fachbegriffen. DSGVO-konform durch drei Betriebsmodi: lokale Verarbeitung (Ollama), EU-Hosting (Mistral) oder Azure OpenAI mit europäischem Rechenzentrum. Letzteres ist der Best-Practice-Ansatz, den auch internationale Großkanzleien für den datenschutzkonformen KI-Einsatz nutzen.
 
 ---
 
@@ -63,7 +63,7 @@ Retrieval-Strategie
 
 **Reduziert die Erstellung juristischer Standarddokumente von 35–50 Klicks auf 5** — inklusive automatischer Befüllung aus der Fachsystem-Datenbank und Batch-Erstellung zusammengehöriger Dokumente. Spart Kanzleien mehrere hundert Stunden pro Monat.
 
-**Problem:** Viele Kanzleien arbeiten mit proprietären Fachsystemen ohne offene Schnittstellen. Dokumentenvorlagen müssen händisch mit Falldaten befüllt werden — Klick für Klick, Feld für Feld. Bei tausenden Dokumenten pro Monat summiert sich das zu enormem Zeitverlust. Bestehende Tools am Markt können die individuellen Vorlagen und geschlossenen Datenbanken dieser Fachsysteme nicht anbinden.
+**Problem:** Viele Kanzleien arbeiten mit proprietären Fachsystemen ohne offene Schnittstellen. Dokumentenvorlagen müssen händisch mit Falldaten befüllt werden und zwar Klick für Klick, Feld für Feld. Bei tausenden Dokumenten pro Monat summiert sich das zu enormem Zeitverlust. Bestehende Tools am Markt können die individuellen Vorlagen und geschlossenen Datenbanken dieser Fachsysteme nicht anbinden.
 
 **Lösung:** Web-Oberfläche, die Templates direkt mit Falldaten befüllt — in 5 Klicks statt 50. Batch-Erstellung zusammengehöriger Dokumente in einem Schritt und RPA-Anbindung an das bestehende Fachsystem.
 
@@ -90,9 +90,9 @@ SQL Server (Fachsystem-Datenbank, read-only)
 
 **Automatisiert den juristischen Arbeitsfluss von der Fallaufnahme bis zum Schriftsatzentwurf** — mit Qualitätssicherung durch phasenspezifische Modellwahl und gegenseitige Prüfung (Adversarial Review). Liefert zwei Versionen: eine für Mandanten (ohne Fundstellen) und eine interne mit vollständigen Zitaten und Normenverweisen.
 
-**Problem:** Juristische Fallbearbeitung folgt einem wiederkehrenden Muster (Sachverhalt → Rechtsfragen → Subsumtion → Schriftsatz), ist aber zeitintensiv und wird vollständig manuell durchgeführt. Kein einzelnes LLM ist für alle juristischen Aufgaben optimal — Halluzinationsraten variieren je nach Aufgabentyp zwischen 5% und 88%.
+**Problem:** Juristische Fallbearbeitung folgt einem wiederkehrenden Muster (Sachverhalt → Rechtsfragen → Subsumtion → Schriftsatz), ist aber zeitintensiv und wird vollständig manuell durchgeführt. Kein einzelnes LLM ist für alle juristischen Aufgaben optimal, Halluzinationsraten variieren je nach Aufgabentyp zwischen 5% und 88%.
 
-**Lösung:** End-to-End-Pipeline mit phasenspezifischer Modellwahl — jede Phase nutzt das jeweils optimale LLM:
+**Lösung:** End-to-End-Pipeline mit phasenspezifischer Modellwahl, jede Phase nutzt das jeweils optimale LLM:
 
 | Phase | Aufgabe | Modell-Kategorie | Rationale |
 |-------|---------|-----------------|-----------|
@@ -180,7 +180,7 @@ Automatisierung RPA · BPMN · ETL-Pipelines
 
 ## Hintergrund
 
-- **Volljurist** — 1. Staatsexamen 9,68 Punkte · 2. Staatsexamen 7,88 Punkte
+- **Volljurist** — zwei Prädikatsexamina
 - **Berufserfahrung** — IT-Rechtsanwalt (Wirtschaftskanzlei) · Syndikusrechtsanwalt (Universitätsklinikum) · Gründer (B2B-Handel, gelistet bei Manufactum)
 - **Aktuell** — Manager KI & Automatisierung, Berlin
 
