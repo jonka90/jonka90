@@ -2,7 +2,7 @@
 
 **Volljurist | Legal Engineer | KI-Automatisierung**
 
-Ich baue digitale Lösungen für Kanzleien und Rechtsabteilungen — von der Prozessanalyse über den Prototyp bis zur Einführung. Zwei Prädikatsexamina (9,68 / 7,88), selbst beigebrachte Programmierkenntnisse, unternehmerische Erfahrung.
+Ich baue digitale Lösungen für Kanzleien und Rechtsabteilungen — von der Prozessanalyse über den Prototyp bis zur Einführung. Zwei Prädikatsexamina, selbst beigebrachte Programmierkenntnisse, unternehmerische Erfahrung.
 
 Aktuell: Manager KI & Automatisierung bei einer Kanzlei in Berlin.
 
